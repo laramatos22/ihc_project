@@ -35,52 +35,86 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                   primary: true,
                   crossAxisCount: 2,
                   children: <Widget>[
-                      Container(
-                        color: Colors.grey,
-                        child: IconButton(
-                            iconSize: 72,
-                            color: Colors.white,
-                            icon: const Icon(Icons.emergency),
-                            onPressed: () {}
-                        ),
+// #############################################################################
+// ################ SCHEDULE - UPPER LEFT BUTTON ###############################
+// #############################################################################
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.white, // --------------------> Text Color  (Foreground color)
                       ),
-                    Container(
-                      color: Colors.grey,
-                      child: IconButton(
-                          iconSize: 72,
-                          color: Colors.white,
-                          icon: const Icon(Icons.person),
-                          onPressed: () {}
+                      icon: const Icon(
+                        color: Colors.white, // ------------------------------> Icon Color
+                        Icons.local_hospital,
+                        size: 80,
                       ),
+                      label: const Text('Agendamentos', style: TextStyle(fontSize: 25)), // ---> Text & its size
                     ),
-                    Container(
-                      color: Colors.grey,
-                      child: IconButton(
-                          iconSize: 72,
-                          color: Colors.white,
-                          icon: const Icon(Icons.phone),
-                          onPressed: () {}
+// #############################################################################
+// ################ PATIENT - UPPER RIGHT BUTTON ###############################
+// #############################################################################
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.white, // --------------------> Text Color  (Foreground color)
                       ),
-                    ),
-                    Container(
-                      color: Colors.grey,
-                      child: IconButton(
-                        iconSize: 72,
-                        color: Colors.white,
-                        icon: const Icon(Icons.notifications),
-                        onPressed: () {}
+                      icon: const Icon(
+                        color: Colors.white, // ------------------------------> Icon Color
+                        Icons.person,
+                        size: 80,
                       ),
+                      label: const Text('Utentes', style: TextStyle(fontSize: 25)), // ---> Text & its size
                     ),
-
+// #############################################################################
+// ################ CONTACTS - LOWER LEFT BUTTON ###############################
+// #############################################################################
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.white, // --------------------> Text Color  (Foreground color)
+                      ),
+                      icon: const Icon(
+                        color: Colors.white, // ------------------------------> Icon Color
+                        Icons.phone,
+                        size: 80,
+                      ),
+                      label: const Text('Contactos', style: TextStyle(fontSize: 25)), // ---> Text & its size
+                    ),
+// #############################################################################
+// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
+// #############################################################################
+                    ElevatedButton.icon(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.white, // --------------------> Text Color  (Foreground color)
+                      ),
+                      icon: const Icon(
+                        color: Colors.white, // ------------------------------> Icon Color
+                        Icons.notifications,
+                        size: 80,
+                      ),
+                      label: const Text('Notificações', style: TextStyle(fontSize: 25)), // ---> Text & its size
+                    ),
                   ],
                 ),
-                Divider(
+// #############################################################################
+// ################ BUTTON DIVIDER #############################################
+// #############################################################################
+                const Divider(
                   color: Colors.black,
                 ),
+// #############################################################################
+// ################ ENDING #####################################################
+// #############################################################################
               ],
             ),
           ),
         ));
       }
     }
-// ####################################
+//------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
