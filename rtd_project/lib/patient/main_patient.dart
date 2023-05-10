@@ -14,11 +14,18 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
   @override
   Widget build(BuildContext context) {
     return MaterialApp( // ----------------------------------------------------> P1: Scaffold tem de ser Child de MaterialApp
-        theme: ThemeData(primaryColor: const Color(0xFF000000)),
+        debugShowCheckedModeBanner: false,
+        title: 'Rede Transporte de Doentes',
+        theme: ThemeData( primarySwatch: Colors.blue,
+          appBarTheme: AppBarTheme(
+            iconTheme: IconThemeData(color: Colors.black),
+            color: Colors.redAccent,
+          ),
+        ),
         home: Scaffold(
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
-            title: Text("Paciente - Menu Principal"),
+            title: Text("Paciente - Menu Principal")
           ),
           body: SingleChildScrollView( // -------------------------------------> P2: Evita Overflow de Pixels **
             child: Column(
@@ -28,32 +35,40 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                   primary: true,
                   crossAxisCount: 2,
                   children: <Widget>[
+                      Container(
+                        color: Colors.grey,
+                        child: IconButton(
+                            iconSize: 72,
+                            color: Colors.white,
+                            icon: const Icon(Icons.emergency),
+                            onPressed: () {}
+                        ),
+                      ),
                     Container(
                       color: Colors.grey,
-                      child: ElevatedButton(
-                          child: Image.asset('~/ihc_project/rtd_project/lib/icons/ambulance.png'),
-                          onPressed: (){}
+                      child: IconButton(
+                          iconSize: 72,
+                          color: Colors.white,
+                          icon: const Icon(Icons.person),
+                          onPressed: () {}
                       ),
                     ),
                     Container(
                       color: Colors.grey,
-                      child: ElevatedButton(
-                          child: Image.asset('~/ihc_project/rtd_project/lib/icons/oldphone.png'),
-                          onPressed: (){}
+                      child: IconButton(
+                          iconSize: 72,
+                          color: Colors.white,
+                          icon: const Icon(Icons.phone),
+                          onPressed: () {}
                       ),
                     ),
                     Container(
                       color: Colors.grey,
-                      child: ElevatedButton(
-                          child: Image.asset('~/ihc_project/rtd_project/lib/icons/ambulance.png'),
-                          onPressed: (){}
-                      ),
-                    ),
-                    Container(
-                      color: Colors.grey,
-                      child: ElevatedButton(
-                          child: Image.asset('~/ihc_project/rtd_project/lib/icons/ambulance.png'),
-                          onPressed: (){}
+                      child: IconButton(
+                        iconSize: 72,
+                        color: Colors.white,
+                        icon: const Icon(Icons.notifications),
+                        onPressed: () {}
                       ),
                     ),
 

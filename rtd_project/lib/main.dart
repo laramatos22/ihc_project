@@ -18,7 +18,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Rede Transporte de Doentes',
-      theme: ThemeData( primaryColor: const Color(0xFF000000)),
+      theme: ThemeData( primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: Colors.black),
+        color: Colors.redAccent,
+        ),
+      ),
       home: LoginPage(),
     );
   }
