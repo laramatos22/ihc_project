@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'firefighter/main_bombeiros.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -61,17 +63,23 @@ class _LoginPageState extends State<LoginPage> {
               height: 15,
             ),
 
-            /*
+
             ElevatedButton(
-              onPressed: (){
-                //TODO FORGOT PASSWORD SCREEN GOES HERE
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => MainFirefighter())
+                );
               },
               child: Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
+                'MAIN - BOMBEIROS',
+                style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ),
-             */
+
+            SizedBox(
+              height: 15,
+            ),
+
 
             Container(
               height: 50,
