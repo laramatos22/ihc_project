@@ -1,31 +1,45 @@
 import 'package:flutter/material.dart';
-
 //
-
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//
 void main() {
-  runApp(MainPatient());
-}// ------------------------------------------------------> MANDAR FORA NO FIM!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+  int debbug = 1;
+  if(debbug == 1){
+    runApp(MainPatient());
+  }
+}
+//
+// #############################################################################
+// ################ Patient Main Menu Class ####################################
+// #############################################################################
+//
 class MainPatient extends StatefulWidget {
   @override
   _PatientState createState() => _PatientState();
 }
-
+//
+// #############################################################################
+// ################ Patient State Class - Main Menu ############################
+// #############################################################################
+//
 class _PatientState extends State<MainPatient> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( // ----------------------------------------------------> P1: Scaffold tem de ser Child de MaterialApp
+    return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Rede Transporte de Doentes',
         theme: ThemeData(
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
-            iconTheme: IconThemeData(color: Colors.black),
-            color: Colors.redAccent
-          ),
-          ),
-        home: Scaffold(
-          backgroundColor: Colors.black,
+              iconTheme: IconThemeData(color: Colors.black),
+              color: Colors.redAccent
+              ),
+        ),
+// _____________________________________________________________________________
+        home: Scaffold( // ----------------------------------------------------> P1: Scaffold tem de ser Child de MaterialApp
+          backgroundColor: Colors.black, // -----------------------------------> EDIT: Background Color
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
             title: Text("Paciente - Menu Principal")
@@ -102,7 +116,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                         Icons.notifications,
                         size: 80,
                       ),
-                      label: const Text('Notificações', style: TextStyle(fontSize: 25)), // ---> Text & its size
+                      label: const Text('Notificações', style: TextStyle(fontSize: 25)), // ---> Text & size
                     ),
                   ],
                 ),
