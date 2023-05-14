@@ -42,7 +42,12 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
           backgroundColor: Colors.black, // -----------------------------------> EDIT: Background Color
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
-            title: Text("Paciente - Menu Principal")
+            leading: BackButton(
+                color: Colors.black
+            ),
+            title: const Center(
+              child: Text("Paciente - Menu Principal")
+            ),
           ),
           body: SingleChildScrollView( // -------------------------------------> P2: Evita Overflow de Pixels **
             child: Column(

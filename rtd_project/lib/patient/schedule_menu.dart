@@ -40,8 +40,11 @@ class _ScheduleState extends State<ScheduleMainMenu> {
 // _____________________________________________________________________________
     home: Scaffold(
       backgroundColor: Colors.white,
+      resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
+        leading: BackButton(
+            color: Colors.black
+        ),
         title: const Center(
           child: Text("Agendar"),
         ),
