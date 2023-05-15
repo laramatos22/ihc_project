@@ -78,6 +78,9 @@ class ScheduleFormState extends State<ScheduleForm> {
   final _formKey = GlobalKey<FormState>();
   TextEditingController dateController = TextEditingController();
 
+  // For the purpose of displaying error messages at appropriate moments
+  bool _submitted = false;
+
   String? get _errorText {
     // at any time, we can get the text from _controller.value.text
     final text = dateController.value.text;
@@ -125,9 +128,10 @@ class ScheduleFormState extends State<ScheduleForm> {
                 ),
                   TextField(
                       controller: dateController, //editing controller of this TextField
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                           icon: Icon(Icons.calendar_today), //icon of text field
                           labelText: "Hora *", //label text of field
+                          errorText: _submitted ? _errorText : null ,
                       ),
                       readOnly: true,  // when true user cannot edit text
                       onTap: () async {
@@ -146,7 +150,7 @@ class ScheduleFormState extends State<ScheduleForm> {
                             dateController.text = selectedTime.hour.toString() + ":" +selectedTime.minute.toString(); //set foratted date to TextField value.
                           });
                         }
-                      }
+                      },
                   ),
                   TextFormField(
                     keyboardType: TextInputType.multiline,
@@ -173,9 +177,12 @@ class ScheduleFormState extends State<ScheduleForm> {
                           const SnackBar(content: Text('A verificar...')),
                         );
                          */
+                          setState(() {
+                            _submitted = true;
+                          });
                         }
                       },
-                      child: const Text('Submit'),
+                      child: const Text('Submeter'),
                     ),
                   ),
               ],
