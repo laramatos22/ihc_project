@@ -22,14 +22,14 @@ class SelectPatient extends StatefulWidget {
 
 class _SelectPatientState extends State<SelectPatient> {
 
-  List<Map<String, dynamic>> contacts = <Map<String, dynamic>>[];
+  List<Map<String, dynamic>> patients = <Map<String, dynamic>>[];
   List<Map<String, dynamic>> filtered = <Map<String, dynamic>>[];
   JsonDecoder decoder = JsonDecoder();
 
   Future<bool> _loadAsset() async {
-    String value = await rootBundle.loadString('assets/files/utentes.json');
+    String value = await rootBundle.loadString('assets/files/patients.json');
     for (Map<String, dynamic> x in decoder.convert(value)["patients"]) {
-      contacts.add(x);
+      patients.add(x);
       filtered.add(x);
     }
     return true;
@@ -123,15 +123,16 @@ class _SelectPatientState extends State<SelectPatient> {
                               ),
                             ),
                             subtitle: Text(
-                              filtered[index]["age"],
+                              filtered[index]["contact"],
                             ),
                             textColor: Colors.blueAccent,
                             trailing: GestureDetector(
                               child: Icon(
-                                  Icons.phone,
+                                  Icons.square_outlined,
                                   color: Colors.blueAccent,
                                   size: 36
                               ),
+                              onTap: null,
                           ),
                     ),
                   ],

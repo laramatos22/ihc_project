@@ -3,19 +3,19 @@
     {
       "name": "Honório Rodrigues",
       "age": 82,
-      "number": "910123456"
+      "contact": "Contacto: 910123456"
     },
 
     {
       "name": "Benedita do Carmo",
-      "age": 96,
-      "number": "919876543"
+      "age": 93,
+      "contact": "Contacto: 919876543"
     },
 
     {
       "name": "Anibal C. Silva",
       "age": 83,
-      "number": "910666999"
+      "contact": "Contacto: 910666999"
     }
   ]
 }
