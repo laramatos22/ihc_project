@@ -21,7 +21,7 @@ class ScheduleTransport extends StatefulWidget {
 }
 //
 // #############################################################################
-// ################ Patient State Class - Main Menu ############################
+// ################ Schedule Transport Class - Main Menu #######################
 // #############################################################################
 //
 class _ScheduleTransState extends State<ScheduleTransport> {
