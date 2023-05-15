@@ -1,0 +1,21 @@
+{
+  "patients" : [
+    {
+      "name": "Honório Rodrigues",
+      "age": 82,
+      "number": "910123456"
+    },
+
+    {
+      "name": "Benedita do Carmo",
+      "age": 96,
+      "number": "919876543"
+    },
+
+    {
+      "name": "Anibal C. Silva",
+      "age": 83,
+      "number": "910666999"
+    }
+  ]
+}
