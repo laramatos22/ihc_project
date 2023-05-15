@@ -22,14 +22,14 @@ class SelectPatient extends StatefulWidget {
 
 class _SelectPatientState extends State<SelectPatient> {
 
-  List<Map<String, dynamic>> history = <Map<String, dynamic>>[];
+  List<Map<String, dynamic>> transportation = <Map<String, dynamic>>[];
   List<Map<String, dynamic>> filtered = <Map<String, dynamic>>[];
   JsonDecoder decoder = JsonDecoder();
 
   Future<bool> _loadAsset() async {
-    String value = await rootBundle.loadString('assets/files/schedule_history.json');
-    for (Map<String, dynamic> x in decoder.convert(value)["history"]) {
-      history.add(x);
+    String value = await rootBundle.loadString('assets/files/scheduled_transports.json');
+    for (Map<String, dynamic> x in decoder.convert(value)["transportation"]) {
+      transportation.add(x);
       filtered.add(x);
     }
     return true;
@@ -93,9 +93,9 @@ class _SelectPatientState extends State<SelectPatient> {
                       )
                   ),
                   onChanged: (e) {
-                    print(history[0]["treatment"]);
+                    print(transportation[0]["treatment"]);
                     setState(() {
-                      filtered = history.where((element) =>
+                      filtered = transportation.where((element) =>
                           element["treatment"].toLowerCase().contains(e.toLowerCase())).toList();
                     });
                   },
@@ -128,8 +128,8 @@ class _SelectPatientState extends State<SelectPatient> {
                               textColor: Colors.blueAccent,
                               trailing: GestureDetector(
                                 child: Icon(
-                                    Icons.check_box,
-                                    color: Colors.green,
+                                    Icons.today_outlined,
+                                    color: Colors.redAccent,
                                     size: 36
                                 ),
                                 onTap: null,
