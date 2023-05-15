@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 // !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
+/*
 void main() {
   int debbug = 1;
   if(debbug == 1){
     runApp(SelectPatient());
   }
-}
+}*/
 //
 // #############################################################################
 // ################ Schedule Main Menu Class ####################################
@@ -64,6 +65,7 @@ class _SelectPatientState extends State<SelectPatient> {
               child: Text('Option 3'),
             ),
           ],
+
           onSelected: (value) { // handles the option menu item selection
             switch (value) {
             case 1:
@@ -77,6 +79,7 @@ class _SelectPatientState extends State<SelectPatient> {
               break;
             }
           },
+
           child: const FloatingActionButton( // creates the add icon button for the floating action button
             onPressed: null,
             child: Icon(Icons.add),

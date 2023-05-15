@@ -16,15 +16,7 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        /*
-        actions: const [
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 5, 10, 5),
-            child: Image(image: AssetImage("assets/images/LogotipoBVCE_branco.png"),
-            ),
-          ),
-        ],
-         */
+
         leading: const BackButton(
           color: Colors.white,
         ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
+import '../patient/select_patient.dart';
+
 void main() {
   runApp(MainFirefighter());
 }
@@ -134,7 +136,11 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                   width: width*0.80,
                                   height: height*0.1,
                                   child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => const SelectPatient())
+                                        );
+                                      },
                                       style: ElevatedButton.styleFrom(
                                         shadowColor: Colors.black,
                                         elevation: 15,
