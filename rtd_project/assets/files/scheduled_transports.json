@@ -1,0 +1,10 @@
+{
+  "transportation" : [
+    {
+      "treatment": "Cirurgia vascular",
+      "location": "Hospital São João, Porto",
+      "date": "16/05/2023",
+      "time": "10:00"
+    }
+  ]
+}
