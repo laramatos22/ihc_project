@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 void main() {
   int debbug = 1;
   if(debbug == 1){
-    runApp(ScheduleTransport());
+    runApp(Notifications());
   }
 }
 //
@@ -15,16 +15,16 @@ void main() {
 // ################ Schedule Main Menu Class ####################################
 // #############################################################################
 //
-class ScheduleTransport extends StatefulWidget {
+class Notifications extends StatefulWidget {
   @override
-  _ScheduleTransState createState() => _ScheduleTransState();
+  _NotificationState createState() => _NotificationState();
 }
 //
 // #############################################################################
 // ################ Patient State Class - Main Menu ############################
 // #############################################################################
 //
-class _ScheduleTransState extends State<ScheduleTransport> {
+class _NotificationState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

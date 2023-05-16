@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/notifications.dart';
+import 'package:rtd_project/patient/schedule_menu.dart';
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,7 +45,10 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
             leading: BackButton(
-                color: Colors.black
+                color: Colors.black,
+                onPressed: () {
+                  Navigator.pop(context);
+                }
             ),
             title: const Center(
               child: Text("Paciente - Menu Principal")
@@ -63,7 +68,11 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
 // ################ SCHEDULE - UPPER LEFT BUTTON ###############################
 // #############################################################################
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => ScheduleMainMenu())
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                         foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
@@ -111,7 +120,11 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
 // ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
 // #############################################################################
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Notifications())
+                        );
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                         foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
