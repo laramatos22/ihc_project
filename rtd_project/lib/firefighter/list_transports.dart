@@ -73,7 +73,7 @@ class _TransportsListState extends State<TransportsList> {
         leading: const BackButton(
           color: Colors.white,
         ),
-        title: const Text("Contactos Internos"),
+        title: const Text("Lista de Transportes"),
         backgroundColor: Color.fromARGB(230, 152, 0, 1),
       ),
 
