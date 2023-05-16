@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:rtd_project/firefighter/list_transports.dart';
 
 import '../patient/select_patient.dart';
 
@@ -138,7 +139,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                   child: ElevatedButton(
                                       onPressed: () {
                                         Navigator.push(context, MaterialPageRoute(
-                                            builder: (context) => const SelectPatient())
+                                            builder: (context) => TransportsList())
                                         );
                                       },
                                       style: ElevatedButton.styleFrom(
