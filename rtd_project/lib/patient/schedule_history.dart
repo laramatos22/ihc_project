@@ -9,18 +9,18 @@ import 'package:flutter/services.dart' show rootBundle;
 void main() {
   int debbug = 1;
   if(debbug == 1){
-    runApp(SelectPatient());
+    runApp(ScheduleHistory());
   }
 }
 
-class SelectPatient extends StatefulWidget {
-  const SelectPatient({Key? key}) : super(key: key);
+class ScheduleHistory extends StatefulWidget {
+  const ScheduleHistory({Key? key}) : super(key: key);
 
   @override
-  _SelectPatientState createState() => _SelectPatientState();
+  _ScheduleHistoryState createState() => _ScheduleHistoryState();
 }
 
-class _SelectPatientState extends State<SelectPatient> {
+class _ScheduleHistoryState extends State<ScheduleHistory> {
 
   List<Map<String, dynamic>> history = <Map<String, dynamic>>[];
   List<Map<String, dynamic>> filtered = <Map<String, dynamic>>[];

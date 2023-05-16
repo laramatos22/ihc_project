@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/presently_scheduled_transports.dart';
+import 'package:rtd_project/patient/schedule_history.dart';
+import 'package:rtd_project/patient/schedule_transport.dart';
+import 'package:rtd_project/patient/schedule_treatment.dart';
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -64,7 +68,11 @@ class _ScheduleState extends State<ScheduleMainMenu> {
                       // -------------------------------------------------------
                       // ------ 1st OPTION - SCHEDULE TRANSPORT ----------------
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => ScheduleTransport())
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                           foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
@@ -81,7 +89,11 @@ class _ScheduleState extends State<ScheduleMainMenu> {
                       // -------------------------------------------------------
                       // ------ 2nd OPTION - SCHEDULED TRANSPORT ---------------
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => PresentlySchedule())
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                           foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
@@ -98,7 +110,11 @@ class _ScheduleState extends State<ScheduleMainMenu> {
                       // -------------------------------------------------------
                       // ------ 3rd OPTION - SCHEDULE HISTORY ------------------
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => ScheduleHistory())
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                           foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
@@ -115,7 +131,11 @@ class _ScheduleState extends State<ScheduleMainMenu> {
                       // -------------------------------------------------------
                       // ------ 4th OPTION - TREATMENT SESSIONS ----------------
                       OutlinedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => ScheduleTreat())
+                          );
+                        },
                         style: OutlinedButton.styleFrom(
                           backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                           foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)

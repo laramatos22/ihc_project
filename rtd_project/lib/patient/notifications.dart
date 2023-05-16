@@ -43,7 +43,10 @@ class _NotificationState extends State<Notifications> {
           resizeToAvoidBottomInset : false,
           appBar: AppBar(
             leading: BackButton(
-                color: Colors.black
+                color: Colors.black,
+                onPressed: () {
+                Navigator.pop(context);
+          }
             ),
             title: const Center(
               child: Text("Notificações"),

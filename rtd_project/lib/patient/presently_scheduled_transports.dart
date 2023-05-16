@@ -9,18 +9,18 @@ import 'package:flutter/services.dart' show rootBundle;
 void main() {
   int debbug = 1;
   if(debbug == 1){
-    runApp(SelectPatient());
+    runApp(PresentlySchedule());
   }
 }
 
-class SelectPatient extends StatefulWidget {
-  const SelectPatient({Key? key}) : super(key: key);
+class PresentlySchedule extends StatefulWidget {
+  const PresentlySchedule({Key? key}) : super(key: key);
 
   @override
-  _SelectPatientState createState() => _SelectPatientState();
+  _PresentlyScheduleState createState() => _PresentlyScheduleState();
 }
 
-class _SelectPatientState extends State<SelectPatient> {
+class _PresentlyScheduleState extends State<PresentlySchedule> {
 
   List<Map<String, dynamic>> transportation = <Map<String, dynamic>>[];
   List<Map<String, dynamic>> filtered = <Map<String, dynamic>>[];
@@ -64,6 +64,7 @@ class _SelectPatientState extends State<SelectPatient> {
          */
           leading: const BackButton(
             color: Colors.white,
+
           ),
           title: const Text("Histórico de transportes"),
           backgroundColor: Colors.redAccent,
