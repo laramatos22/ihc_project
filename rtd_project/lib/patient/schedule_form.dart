@@ -1,7 +1,7 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import 'confirmation_page.dart';
 
 void main()
 {
@@ -168,8 +168,12 @@ class ScheduleFormState extends State<ScheduleForm> {
                     padding: EdgeInsets.all(5),
                     child: ElevatedButton(
                       onPressed: () {
+
                         // Validate returns true if the form is valid, or false otherwise.
                         if (_formKey.currentState!.validate()) {
+                          Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => ConfirmationPage())
+                          );
                           // If the form is valid, display a snackbar. In the real world,
                           // you'd often call a server or save the information in a database.
                           /*

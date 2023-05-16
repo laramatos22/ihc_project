@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/main_patient.dart';
 
 import 'firefighter/main_bombeiros.dart';
 
@@ -72,6 +73,22 @@ class _LoginPageState extends State<LoginPage> {
               },
               child: Text(
                 'MAIN - BOMBEIROS',
+                style: TextStyle(color: Colors.white, fontSize: 15),
+              ),
+            ),
+
+            SizedBox(
+              height: 15,
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => MainPatient())
+                );
+              },
+              child: Text(
+                'MAIN - PACIENTES',
                 style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ),

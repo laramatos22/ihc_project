@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-//
+import 'package:rtd_project/patient/schedule_form.dart';
+
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -132,7 +133,11 @@ class GenericTreatSession extends StatelessWidget {
     // AndroidStudio did some weird indentation here
     return
     GestureDetector(
-        onTap: () { },
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(
+              builder: (context) => ScheduleFormMain())
+          );
+        },
         child: Card(
           elevation: 10,
           shape: RoundedRectangleBorder(
