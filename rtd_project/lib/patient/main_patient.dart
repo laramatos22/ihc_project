@@ -7,7 +7,7 @@ import 'package:rtd_project/patient/schedule_menu.dart';
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
 void main() {
-  int debbug = 1;
+  int debbug = 0;
   if(debbug == 1){
     runApp(MainPatient());
   }
@@ -67,59 +67,39 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
 // #############################################################################
 // ################ SCHEDULE - UPPER LEFT BUTTON ###############################
 // #############################################################################
-                    ElevatedButton.icon(
+                    ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => ScheduleMainMenu())
+                            builder: (context) => ScheduleMainMenu())
                         );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                         foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
                       ),
-                      icon: const Icon(
-                        color: Colors.blueAccent, // ------------------------------> Icon Color
-                        Icons.local_hospital,
-                        size: 80,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.local_hospital,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Agendamentos', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
                       ),
-                      label: const Text('Agendamentos', style: TextStyle(fontSize: 25), textAlign: TextAlign.center, ), // ---> Text & its size
                     ),
 // #############################################################################
 // ################ PATIENT - UPPER RIGHT BUTTON ###############################
 // #############################################################################
-                    ElevatedButton.icon(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
-                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
-                      ),
-                      icon: const Icon(
-                        color: Colors.blueAccent, // ------------------------------> Icon Color
-                        Icons.account_box,
-                        size: 80,
-                      ),
-                      label: const Text('Utentes', style: TextStyle(fontSize: 25)), // ---> Text & its size
-                    ),
-// #############################################################################
-// ################ CONTACTS - LOWER LEFT BUTTON ###############################
-// #############################################################################
-                    ElevatedButton.icon(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
-                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
-                      ),
-                      icon: const Icon(
-                        color: Colors.blueAccent, // ------------------------------> Icon Color
-                        Icons.phone,
-                        size: 80,
-                      ),
-                      label: const Text('Contactos', style: TextStyle(fontSize: 25)), // ---> Text & its size
-                    ),
-// #############################################################################
-// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
-// #############################################################################
-                    ElevatedButton.icon(
+                    ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
                             builder: (context) => Notifications())
@@ -129,12 +109,88 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                         backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
                         foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
                       ),
-                      icon: const Icon(
-                        color: Colors.blueAccent, // ------------------------------> Icon Color
-                        Icons.notifications,
-                        size: 80,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.account_box,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Utentes', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
                       ),
-                      label: const Text('Notificações', style: TextStyle(fontSize: 25)), // ---> Text & size
+                    ),
+// #############################################################################
+// ################ CONTACTS - LOWER LEFT BUTTON ###############################
+// #############################################################################
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Notifications())
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.phone,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Contactos', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
+                      ),
+                    ),
+// #############################################################################
+// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
+// #############################################################################
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Notifications())
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.notifications,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Notificações', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),

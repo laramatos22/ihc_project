@@ -31,13 +31,14 @@ class _LoginPageState extends State<LoginPage> {
                     child: Image.asset('assets/images/ambulancia.jpeg')),
               ),
             ),
-
+// #############################################################################
+// ################ INSERT EMAIL & PASSWORD - LOGIN ############################
+// #############################################################################
             SizedBox(
               height: 15,
             ),
 
             Padding(
-              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
                 decoration: InputDecoration(
@@ -47,11 +48,8 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(
-                  left: 15.0, right: 15.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
-
                 obscureText: true,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -63,7 +61,9 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 15,
             ),
-
+// #############################################################################
+// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
+// #############################################################################
 
             ElevatedButton(
               onPressed: () {
