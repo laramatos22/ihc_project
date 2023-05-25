@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rtd_project/patient/main_patient.dart';
+import 'package:email_validator/email_validator.dart';
 
+import 'InputDecroation.dart';
 import 'firefighter/main_bombeiros.dart';
+
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -10,6 +14,11 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   @override
+
+  late String name,email,phone;
+  TextEditingController password = TextEditingController();
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -37,16 +46,22 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 15,
             ),
-
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Email',
-                    hintText: 'Enter valid email id as abc@gmail.com'),
+              child: TextFormField(
+                keyboardType: TextInputType.text,
+                decoration: buildInputDecoration(Icons.email,"Email"),
+                validator: (String value) {
+                  if(value.isEmpty) { return 'Please a Enter'; }
+                  if(!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) { return 'Please a valid Email'; }
+                  return null;
+                },
+                onSaved: (String value){
+                  email = value;
+                },
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
               child: TextField(
@@ -62,7 +77,6 @@ class _LoginPageState extends State<LoginPage> {
               height: 15,
             ),
 // #############################################################################
-// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
 // #############################################################################
 
             ElevatedButton(
@@ -124,4 +138,14 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+}
+// #############################################################################
+// ################ FUNCTIONS ##################################################
+// #############################################################################
+
+// --------------- FUNCTION: Validate email ------------------------------------
+void Validate(String email) {
+  bool isvalid = EmailValidator.validate(email);
+  print(isvalid);
+//  assert(EmailValidator.validate(email));
 }

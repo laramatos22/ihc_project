@@ -37,6 +37,7 @@ dependencies:
   intl: ^0.17.0 # For date formatting
   cupertino_icons: ^1.0.2
   flutter_image_slideshow: ^0.1.5
+  email_validator: ^2.1.17
 
 dev_dependencies:
   flutter_test:
