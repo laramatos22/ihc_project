@@ -66,8 +66,8 @@ class _ScheduleTreatState extends State<ScheduleTreat> {
                   GenericTreatSession(
                     treatmentName: "Fisioterapia",
                     location: "Hospital Y",
-                    date: "25/05/2023",
-                    time: "15:00 - 16:00",
+                    date: "30/05/2023",
+                    time: "16:00 - 17:00",
                   ),
                   Divider(),
                   GenericTreatSession(

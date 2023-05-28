@@ -1,10 +1,10 @@
 {
   "transportation" : [
     {
-      "treatment": "Cirurgia vascular",
+      "treatment": "Fisioterapia",
       "location": "Hospital São João, Porto",
-      "date": "16/05/2023",
-      "time": "10:00"
+      "date": "30/05/2023",
+      "time": "12:00"
     }
   ]
 }

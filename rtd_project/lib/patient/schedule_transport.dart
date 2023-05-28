@@ -59,29 +59,25 @@ class _ScheduleTransState extends State<ScheduleTransport> {
             padding: EdgeInsets.all(5),
             child: Column(
               children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.all(5),
-                  child: Text("Agendar transporte para utente X", style: TextStyle(fontSize: 17.6)),
-                ),
                 Divider(),
                 //
                 // SELECT TREATMENT SESSION
                 //
                 Card(
                     margin: EdgeInsets.all(10),
-                    color: Colors.lightBlueAccent,
+                    color: Colors.white,
                     child: Padding(
                       padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                       child:
                         ListTile(
                           leading: Icon(
                             Icons.arrow_downward_sharp,
-                            color: Colors.white,
+                            color: Colors.black,
                             size: 50,
                           ),
                           title: Text('Selecione uma sessão de tratamento',
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: 20 ,
                                 fontWeight: FontWeight.bold,
                               )),

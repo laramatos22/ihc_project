@@ -15,6 +15,7 @@ void main() {
 // ################ Schedule Main Menu Class ####################################
 // #############################################################################
 //
+
 class Notifications extends StatefulWidget {
   @override
   _NotificationState createState() => _NotificationState();
@@ -59,7 +60,7 @@ class _NotificationState extends State<Notifications> {
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.all(5),
-                    child: Text("Hoje - 16/05/2023:", style: TextStyle(fontSize: 17.6)),
+                    child: Text("Hoje - 30/05/2023:", style: TextStyle(fontSize: 17.6)),
                   ),
                   Divider(),
                   //
@@ -69,7 +70,7 @@ class _NotificationState extends State<Notifications> {
                   GenericTreatSession(
                     notificationTitle: "Transportate confirmado! ",
                     location: "Hospital São João, Porto",
-                    date: "16/05/2023",
+                    date: "30/05/2023",
                     time: "10:00",
                   ),
                   Divider(),
@@ -79,6 +80,7 @@ class _NotificationState extends State<Notifications> {
                     date: "11/02/2020",
                     time: "14:30",
                   ),
+                  /*
                   Divider(),
                   GenericTreatSession(
                     notificationTitle: "Transportate confirmado!",
@@ -93,6 +95,8 @@ class _NotificationState extends State<Notifications> {
                     date: "25/08/2018",
                     time: "11:00",
                   ),
+
+                   */
                 ],
               ),
             ),

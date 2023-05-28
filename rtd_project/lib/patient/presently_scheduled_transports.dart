@@ -59,7 +59,7 @@ class _PresentlyScheduleState extends State<PresentlySchedule> {
                 Navigator.pop(context);
               }
           ),
-          title: const Text("Transportes já marcados:"),
+          title: const Text("Transportes já marcados"),
           backgroundColor: Color.fromARGB(230, 150, 0, 0),
         ),
 

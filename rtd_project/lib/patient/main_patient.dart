@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/contacts.dart';
 import 'package:rtd_project/patient/notifications.dart';
 import 'package:rtd_project/patient/schedule_menu.dart';
 //
@@ -134,7 +135,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => Notifications())
+                            builder: (context) => Contacts())
                         );
                       },
                       style: ElevatedButton.styleFrom(
