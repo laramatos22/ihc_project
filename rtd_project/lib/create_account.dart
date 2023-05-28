@@ -44,7 +44,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 Navigator.pop(context);
               }
           ),
-          title: Text("RTD - Login"),
+          title: Text("RTD - Criar uma Conta"),
         ),
         body: Form(
           key: _formKey,
