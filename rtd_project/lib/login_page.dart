@@ -42,6 +42,14 @@ class _LoginPageState extends State<LoginPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+
+                  Image(
+                    image: AssetImage('assets/logo/icon.png'),
+                    width: 200, // desired width
+                    height: 200, // desired height
+                    fit: BoxFit.cover, // how the image should be inscribed into the space
+                  ),
+
                   Padding(
                     padding:
                     const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
@@ -79,7 +87,19 @@ class _LoginPageState extends State<LoginPage> {
                     child: Center(
                       child: ElevatedButton(
 
-                        child: const Text('Login'),
+                        child: const Text('Login',
+                          style: TextStyle(
+                            fontSize: 20
+                          ),
+                        ),
+
+                          style: ElevatedButton.styleFrom(
+                            shadowColor: Colors.black,
+                            elevation: 15,
+                            backgroundColor: Color.fromARGB(230, 152, 0, 1),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13.0)),
+                          ),
+
                         onPressed: () {
                           if (emailController.text == "honorio@gmail.com" &&
                               passwordController.text == "ajuda123") {
@@ -118,15 +138,22 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                     ),
                   ),
+
                   SizedBox(
-                    height: 130,
+                    height: 70,
                   ),
+
               TextButton(
                 onPressed: () =>
                     Navigator.push(context, MaterialPageRoute(
                         builder: (context) => CreateAccount()
-                    ),),
-                  child: const Text('Não tem conta? Crie uma aqui!'),
+                      ),
+                    ),
+                    child: const Text('Não tem conta? Crie uma aqui!',
+                      style: TextStyle(
+                        color: Colors.black,
+                      ),
+                    ),
                   )
                 ],
               ),
