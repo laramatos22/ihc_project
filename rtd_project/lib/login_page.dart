@@ -1,25 +1,27 @@
+
+/*
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:rtd_project/patient/main_patient.dart';
-import 'package:email_validator/email_validator.dart';
-
-import 'InputDecroation.dart';
 import 'firefighter/main_bombeiros.dart';
-
-
-
+//
+// #############################################################################
+// ################ LOGIN PAGE CLASS ###########################################
+// #############################################################################
+//
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
-
+//
+// #############################################################################
+// ################ LOGIN PAGE STATE CLASS #####################################
+// #############################################################################
+//
 class _LoginPageState extends State<LoginPage> {
   @override
-
-  late String name,email,phone;
-  TextEditingController password = TextEditingController();
-  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-
   Widget build(BuildContext context) {
+    var inputcontroller;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -40,31 +42,67 @@ class _LoginPageState extends State<LoginPage> {
                     child: Image.asset('assets/images/ambulancia.jpeg')),
               ),
             ),
-// #############################################################################
-// ################ INSERT EMAIL & PASSWORD - LOGIN ############################
-// #############################################################################
-            SizedBox(
-              height: 15,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 15),
-              child: TextFormField(
-                keyboardType: TextInputType.text,
-                decoration: buildInputDecoration(Icons.email,"Email"),
-                validator: (String value) {
-                  if(value.isEmpty) { return 'Please a Enter'; }
-                  if(!RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+.[a-z]").hasMatch(value)) { return 'Please a valid Email'; }
-                  return null;
-                },
-                onSaved: (String value){
-                  email = value;
-                },
+
+            
+            
+            
+            
+            
+            // text field for user input
+            TextField(
+              // text editing controller
+              controller: inputcontroller,
+              keyboardType: TextInputType.multiline,
+              maxLines: null,
+              style: TextStyle(
+                fontSize: 18,
+              ),
+              decoration: InputDecoration(
+                hintText: "Enter Email",
+                border: OutlineInputBorder(),
               ),
             ),
 
+            // material button that will
+            // call the validate method by
+            // passing user input.
+            MaterialButton(
+              onPressed: (() => Validate(inputcontroller.text)),
+              child: Text("Check"),
+            ),
+       
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            SizedBox(
+              height: 15,
+            ),
+
             Padding(
-              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 15, bottom: 0),
+              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
+              padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'Email',
+                    hintText: 'Enter valid email id as abc@gmail.com'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 15, bottom: 0),
+              //padding: EdgeInsets.symmetric(horizontal: 15),
+              child: TextField(
+
                 obscureText: true,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -76,8 +114,7 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 15,
             ),
-// #############################################################################
-// #############################################################################
+
 
             ElevatedButton(
               onPressed: () {
@@ -102,7 +139,7 @@ class _LoginPageState extends State<LoginPage> {
                 );
               },
               child: Text(
-                'MAIN - PACIENTES',
+                'MAIN - PATIENT',
                 style: TextStyle(color: Colors.white, fontSize: 15),
               ),
             ),
@@ -110,7 +147,6 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 15,
             ),
-
 
             Container(
               height: 50,
@@ -139,13 +175,109 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-// #############################################################################
-// ################ FUNCTIONS ##################################################
-// #############################################################################
 
-// --------------- FUNCTION: Validate email ------------------------------------
+// VALIDATE EMAIL INPUTED AND USE BOOLEAN VALUE
 void Validate(String email) {
   bool isvalid = EmailValidator.validate(email);
   print(isvalid);
-//  assert(EmailValidator.validate(email));
+}
+
+*/
+
+import 'package:email_validator/email_validator.dart';
+import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/main_patient.dart';
+import 'firefighter/main_bombeiros.dart';
+
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
+//
+// #############################################################################
+// ################ LOGIN PAGE STATE CLASS #####################################
+// #############################################################################
+//
+class _LoginPageState extends State<LoginPage> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("LOGIN PAGE"),
+      ),
+      body: Form(
+        key: _formKey,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextFormField(
+                  controller: emailController,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(), labelText: "Email"),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Insira o seu email...';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Padding(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+                child: TextFormField(
+                  controller: passwordController,
+                  obscureText: true,
+                  decoration: const InputDecoration(
+                      border: OutlineInputBorder(), labelText: "Password"),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Insira a sua Password...';
+                    }
+                    return null;
+                  },
+                ),
+              ),
+              Padding(
+                padding:
+                const EdgeInsets.symmetric(horizontal: 8, vertical: 16.0),
+                child: Center(
+                  child: ElevatedButton(
+                    /*
+                      MainFirefighter()
+                      MainPatient()
+                      ERROR MESSAGE
+                    */
+                    child: const Text('Login'),
+                    onPressed: () {
+                      if (emailController.text == "honorio@gmail.com" && passwordController.text == "ajuda1234") {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => MainPatient(email: emailController.text,
+                          )
+                        ),
+                      );
+                      } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                      content: Text('Email ou Password incorrectos. Tente novamente...')),
+                      );
+                      }
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
