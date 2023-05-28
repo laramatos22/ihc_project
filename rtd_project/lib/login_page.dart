@@ -80,27 +80,40 @@ class _LoginPageState extends State<LoginPage> {
 
                         child: const Text('Login'),
                         onPressed: () {
-                          if (emailController.text == "honorio@gmail.com" && passwordController.text == "ajuda123") {
-                            Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => MainPatient()
-                            ),);
-                          }
-                          if (emailController.text == "marialuisa@gmail.com" && passwordController.text == "ajuda123") {
+                          if (emailController.text == "honorio@gmail.com" &&
+                              passwordController.text == "ajuda123") {
                             Navigator.push(context, MaterialPageRoute(
                                 builder: (context) => MainPatient()
                             ),);
                           }
-                          if (emailController.text == "paulo@bombeiro.pt" && passwordController.text == "ajuda123") {
-                                Navigator.push(context, MaterialPageRoute(
-                                builder: (context) => MainFirefighter()
-                                ),);
-                          } else {
-                                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-                                  content: Text('Email ou Password incorrectos. Tente novamente...')
-                                ),);
+                          if (emailController.text == "marialuisa@gmail.com" &&
+                              passwordController.text == "ajuda123") {
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => MainPatient()
+                            ),);
                           }
-                        }
-                      ),
+                          if (emailController.text == "paulo@bombeiro.pt" &&
+                              passwordController.text == "ajuda123") {
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => MainFirefighter()
+                            ),);
+                          } else {
+                            showDialog<String>(context: context,
+                              builder: (BuildContext context) =>
+                                  AlertDialog(
+                                    title: const Text('Credenciais Erradas!'),
+                                    content: const Text(
+                                        'Email ou Password incorrectos.'),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(context, 'OK'),
+                                        child: const Text('OK'),
+                                      ),
+                                    ],
+                                  ),);
+                          }}
+                        ),
                     ),
                   ),
                   SizedBox(

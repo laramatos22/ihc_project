@@ -41,7 +41,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
         ),
 // _____________________________________________________________________________
         home: Scaffold( // ----------------------------------------------------> P1: Scaffold tem de ser Child de MaterialApp
-          backgroundColor: Colors.black, // -----------------------------------> EDIT: Background Color
+          backgroundColor: Color.fromARGB(230, 150, 0, 0), // -----------------------------------> EDIT: Background Color
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
             leading: BackButton(
