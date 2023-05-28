@@ -1,5 +1,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
+import 'package:rtd_project/create_account.dart';
 import 'package:rtd_project/patient/main_patient.dart';
 import 'firefighter/main_bombeiros.dart';
 
@@ -112,14 +113,21 @@ class _LoginPageState extends State<LoginPage> {
                                       ),
                                     ],
                                   ),);
-                          }}
+                          }
+                        }
                         ),
                     ),
                   ),
                   SizedBox(
                     height: 130,
                   ),
-                  Text('New User? Create Account')
+              TextButton(
+                onPressed: () =>
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => CreateAccount()
+                    ),),
+                  child: const Text('Não tem conta? Crie uma aqui!'),
+                  )
                 ],
               ),
             ),

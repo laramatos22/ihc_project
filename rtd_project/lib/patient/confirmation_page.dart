@@ -1,23 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/main_patient.dart';
 
 class ConfirmationPage extends StatefulWidget {
   const ConfirmationPage({Key? key}) : super(key: key);
-
   @override
   _ConfirmationPageState createState() => _ConfirmationPageState();
 }
 
 class _ConfirmationPageState extends State<ConfirmationPage> {
-
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
       resizeToAvoidBottomInset : false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-
         leading: BackButton(
             color: Colors.white,
             onPressed: () {
@@ -27,7 +23,6 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
         title: const Text("Página de Confirmação"),
         backgroundColor: Color.fromARGB(230, 152, 0, 1),
       ),
-
       body: SafeArea(
           child: Center(
             child: Column(
@@ -45,7 +40,6 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
                           ),
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: Text('O seu pedido está a ser processado. \nSerá informado quando for aprovado',
@@ -57,28 +51,23 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
                           ),
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(
+                                  builder: (context) => MainPatient()
+                              ),);
+                            },
                             child: Text('OK'),
                         ),
                       ),
-
-
                     ],
                   ),
-
-
-
               ],
             ),
-
           )
-
       ),
-
     );
   }
 }
