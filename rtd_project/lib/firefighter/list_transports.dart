@@ -74,7 +74,7 @@ class _TransportsListState extends State<TransportsList> {
           color: Colors.white,
         ),
         title: const Text("Lista de Transportes"),
-        backgroundColor: Color.fromARGB(230, 152, 0, 1),
+        backgroundColor: Color.fromARGB(230, 150, 0, 0),
       ),
 
       body: Padding(

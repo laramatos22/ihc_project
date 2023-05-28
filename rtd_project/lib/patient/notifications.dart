@@ -34,19 +34,18 @@ class _NotificationState extends State<Notifications> {
             primarySwatch: Colors.blue,
             appBarTheme: AppBarTheme(
                 iconTheme: IconThemeData(color: Colors.black),
-                color: Colors.redAccent
+                backgroundColor: Color.fromARGB(230, 150, 0, 0),
             )
         ),
 // _____________________________________________________________________________
         home: Scaffold(
-          backgroundColor: Colors.white,
           resizeToAvoidBottomInset : false,
           appBar: AppBar(
             leading: BackButton(
-                color: Colors.black,
+                color: Colors.white,
                 onPressed: () {
-                Navigator.pop(context);
-          }
+                  Navigator.pop(context);
+                }
             ),
             title: const Center(
               child: Text("Notificações"),

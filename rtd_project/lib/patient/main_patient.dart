@@ -36,7 +36,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(color: Colors.black),
-              color: Colors.redAccent
+              color: Color.fromARGB(230, 150, 0, 0),
               ),
         ),
 // _____________________________________________________________________________
@@ -45,13 +45,13 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
           resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
           appBar: AppBar(
             leading: BackButton(
-                color: Colors.black,
+                color: Colors.white,
                 onPressed: () {
                   Navigator.pop(context);
                 }
             ),
             title: const Center(
-              child: Text("Paciente - Menu Principal")
+              child: Text("RTD - Menú Principal")
             ),
           ),
           body: SingleChildScrollView( // -------------------------------------> P2: Evita Overflow de Pixels **

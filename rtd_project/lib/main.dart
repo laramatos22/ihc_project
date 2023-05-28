@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData( primarySwatch: Colors.blue,
         appBarTheme: AppBarTheme(
         iconTheme: IconThemeData(color: Colors.black),
-        color: Color.fromARGB(230, 152, 0, 1),
+        backgroundColor: Color.fromARGB(230, 150, 0, 0),
         ),
       ),
       home: LoginPage(),

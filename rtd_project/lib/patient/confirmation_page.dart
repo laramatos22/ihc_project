@@ -14,11 +14,15 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
 
 
     return Scaffold(
+      resizeToAvoidBottomInset : false,
       appBar: AppBar(
         automaticallyImplyLeading: false,
 
-        leading: const BackButton(
-          color: Colors.white,
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: () {
+              Navigator.pop(context);
+            }
         ),
         title: const Text("Página de Confirmação"),
         backgroundColor: Color.fromARGB(230, 152, 0, 1),
@@ -28,10 +32,8 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
           child: Center(
             child: Column(
               children: [
-
                Column(
                  children: [
-
                       Padding(
                         padding: const EdgeInsets.all(5),
                         child: Text('Aguarde um momento...',

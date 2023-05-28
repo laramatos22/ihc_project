@@ -35,7 +35,7 @@ class _ScheduleTransState extends State<ScheduleTransport> {
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(color: Colors.black),
-              color: Colors.redAccent
+              backgroundColor: Color.fromARGB(230, 150, 0, 0),
           )
       ),
 // _____________________________________________________________________________
@@ -44,10 +44,13 @@ class _ScheduleTransState extends State<ScheduleTransport> {
         resizeToAvoidBottomInset : false, // --------------------------------> P2: Evita Overflow de Pixels **
         appBar: AppBar(
           leading: BackButton(
-              color: Colors.black
+              color: Colors.white,
+              onPressed: () {
+                Navigator.pop(context);
+              }
           ),
           title: const Center(
-            child: Text("Agendar"),
+            child: Text("Agendar transporte"),
           ),
         ),
 
@@ -164,7 +167,7 @@ class GenericTreatSession extends StatelessWidget {
                   subtitle: Text(this.location),
                 ),
                 Card(
-                  color: Colors.redAccent,
+                  color: Color.fromARGB(230, 150, 0, 0),
                   child:
                   ListTile(
                     title: Text(this.date,

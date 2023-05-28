@@ -36,7 +36,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
         primarySwatch: Colors.blue,
         appBarTheme: AppBarTheme(
             iconTheme: IconThemeData(color: Colors.black),
-            color: Colors.redAccent
+            backgroundColor: Color.fromARGB(230, 150, 0, 0),
         ),
       ),
       home:Scaffold(
@@ -55,7 +55,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
           color: Colors.white,
         ),*/
         title: const Text("Área do Bombeiro"),
-        backgroundColor: const Color.fromARGB(230, 152, 0, 1),
+        backgroundColor: Color.fromARGB(230, 150, 0, 0),
       ),
 
       body: Stack(

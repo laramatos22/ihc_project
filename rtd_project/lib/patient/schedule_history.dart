@@ -47,26 +47,21 @@ class _ScheduleHistoryState extends State<ScheduleHistory> {
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(color: Colors.black),
-              color: Colors.redAccent
+              backgroundColor: Color.fromARGB(230, 150, 0, 0),
           )
       ),
       home: Scaffold(
+        resizeToAvoidBottomInset : false,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          /*
-        actions: const [
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 5, 10, 5),
-            child: Image(image: AssetImage("assets/images/LogotipoBVCE_branco.png"),
-            ),
-          ),
-        ],
-         */
-          leading: const BackButton(
-            color: Colors.white,
+          leading: BackButton(
+              color: Colors.white,
+              onPressed: () {
+                Navigator.pop(context);
+              }
           ),
           title: const Text("Histórico de transportes"),
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color.fromARGB(230, 150, 0, 0),
         ),
 
         body: Padding(

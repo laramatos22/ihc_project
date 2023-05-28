@@ -26,12 +26,13 @@ class _LoginPageState extends State<LoginPage> {
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(color: Colors.black),
-              color: Colors.redAccent
+              backgroundColor: Color.fromARGB(230, 150, 0, 0),
           ),
         ),
         home: Scaffold(
+          resizeToAvoidBottomInset : false,
             appBar: AppBar(
-              title: Text("LOGIN PAGE"),
+              title: Text("RTD - Login"),
             ),
             body: Form(
               key: _formKey,

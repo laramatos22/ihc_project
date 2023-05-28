@@ -47,27 +47,20 @@ class _PresentlyScheduleState extends State<PresentlySchedule> {
           primarySwatch: Colors.blue,
           appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(color: Colors.black),
-              color: Colors.redAccent
-          )
-      ),
+              backgroundColor: Color.fromARGB(230, 150, 0, 0),
+      ),),
       home: Scaffold(
+        resizeToAvoidBottomInset : false,
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          /*
-        actions: const [
-          Padding(
-            padding: EdgeInsets.fromLTRB(0, 5, 10, 5),
-            child: Image(image: AssetImage("assets/images/LogotipoBVCE_branco.png"),
-            ),
+          leading: BackButton(
+              color: Colors.white,
+              onPressed: () {
+                Navigator.pop(context);
+              }
           ),
-        ],
-         */
-          leading: const BackButton(
-            color: Colors.white,
-
-          ),
-          title: const Text("Histórico de transportes"),
-          backgroundColor: Colors.redAccent,
+          title: const Text("Transportes já marcados:"),
+          backgroundColor: Color.fromARGB(230, 150, 0, 0),
         ),
 
         body: Padding(
