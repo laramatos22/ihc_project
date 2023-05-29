@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rtd_project/patient/contacts.dart';
 import 'package:rtd_project/patient/notifications.dart';
 import 'package:rtd_project/patient/schedule_menu.dart';
+import 'package:rtd_project/patient/user_details.dart';
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // !!!!!!!!!!!!!!!! DEBUGGER SNIPPET !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -52,7 +53,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                 }
             ),
             title: const Center(
-              child: Text("RTD - Menú Principal")
+              child: Text("RTD - Menu Principal")
             ),
           ),
           body: SingleChildScrollView( // -------------------------------------> P2: Evita Overflow de Pixels **
@@ -103,7 +104,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(
-                            builder: (context) => Notifications())
+                            builder: (context) => UserDetails())
                         );
                       },
                       style: ElevatedButton.styleFrom(
