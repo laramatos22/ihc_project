@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rtd_project/patient/about.dart';
 import 'package:rtd_project/patient/contacts.dart';
+import 'package:rtd_project/patient/faq.dart';
 import 'package:rtd_project/patient/notifications.dart';
 import 'package:rtd_project/patient/schedule_menu.dart';
 import 'package:rtd_project/patient/user_details.dart';
@@ -131,7 +133,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                       ),
                     ),
 // #############################################################################
-// ################ CONTACTS - LOWER LEFT BUTTON ###############################
+// ################ CONTACTS - MIDDLE LEFT BUTTON ##############################
 // #############################################################################
                     ElevatedButton(
                       onPressed: () {
@@ -163,7 +165,7 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                       ),
                     ),
 // #############################################################################
-// ################ NOTIFICATIONS - LOWER RIGHT BUTTON #########################
+// ################ NOTIFICATIONS - MIDDLE RIGHT BUTTON ########################
 // #############################################################################
                     ElevatedButton(
                       onPressed: () {
@@ -194,6 +196,72 @@ class _PatientState extends State<MainPatient> with SingleTickerProviderStateMix
                         ],
                       ),
                     ),
+// #############################################################################
+// ################ CONTACTS - LOWER LEFT BUTTON ##############################
+// #############################################################################
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Faq())
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.help,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Ajuda', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
+                      ),
+                    ),
+// #############################################################################
+// ################ CONTACTS - MIDDLE LEFT BUTTON ##############################
+// #############################################################################
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => About())
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white, // ---------------------> Button Color (Background color)
+                        foregroundColor: Colors.blueAccent, // --------------------> Text Color  (Foreground color)
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height:0.1,
+                          ),
+                          Icon(
+                            color: Colors.blueAccent, // ------------------------------> Icon Color
+                            Icons.info,
+                            size: 80,
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child:
+                            Text('Sobre', style: TextStyle(fontSize: 25),), // -> Text & Size
+                          ),
+                        ],
+                      ),
+                    ),
+
+
                   ],
                 ),
 // #############################################################################
