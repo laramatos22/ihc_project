@@ -4,9 +4,9 @@ import 'Patient.dart';
 
 class PatientListProvider with ChangeNotifier {
   List<Patient> _patients = [
-    Patient(name: 'John', status: 'Próximo'),
-    Patient(name: 'Jane', status: 'Recolhido'),
-    Patient(name: 'Alice', status: 'Concluído'),
+    Patient(name: 'Honório Rodrigues ', status: 'Próximo'),
+    Patient(name: 'Joaquina Lima', status: 'Recolhido'),
+    Patient(name: 'Bernardo Loureiro', status: 'Concluído'),
     // Add more patients as needed
   ];
 

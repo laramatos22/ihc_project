@@ -3,6 +3,7 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:rtd_project/firefighter/list_transports.dart';
 
 import '../patient/select_patient.dart';
+import 'MultiProvider.dart';
 
 void main() {
   runApp(MainFirefighter());
@@ -139,7 +140,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                   child: ElevatedButton(
                                       onPressed: () {
                                         Navigator.push(context, MaterialPageRoute(
-                                            builder: (context) => TransportsList())
+                                            builder: (context) => Multi_Provider())
                                         );
                                       },
                                       style: ElevatedButton.styleFrom(
@@ -157,7 +158,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                               color: Colors.white
                                           ),
 
-                                          Text('TRANSPORTES',
+                                          Text('LISTA DE TRANSPORTES',
                                             style: TextStyle(
                                                 fontSize: Checkbox.width,
                                                 fontFamily: 'Montserrat',
