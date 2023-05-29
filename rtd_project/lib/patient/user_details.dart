@@ -74,9 +74,13 @@ class _UserDetailsState extends State<UserDetails> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-
-        leading: const BackButton(
-          color: Colors.white,
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => MainPatient())
+              );
+            }
         ),
         title: const Text("Lista de Transportes"),
         backgroundColor: Color.fromARGB(230, 150, 0, 0),
