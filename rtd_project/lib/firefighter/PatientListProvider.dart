@@ -4,9 +4,11 @@ import 'Patient.dart';
 
 class PatientListProvider with ChangeNotifier {
   List<Patient> _patients = [
-    Patient(name: 'Honório Rodrigues ', status: 'Próximo'),
-    Patient(name: 'Joaquina Lima', status: 'Recolhido'),
-    Patient(name: 'Bernardo Loureiro', status: 'Concluído'),
+    Patient(name: 'Honório Rodrigues', status: 'Próximo', details: "83 anos - Rua da Amoreira, nº 42"),
+    Patient(name: 'Joaquina Lima', status: 'Recolhido', details: "79 anos - Avenida Lourenço Peixinho, nº 69"),
+    Patient(name: 'Bernardo Loureiro', status: 'Concluído', details: "Travessa da Universidade, nº 27"),
+    Patient(name: 'José Luís Vieira', status: 'Próximo', details: "75 anos - Rua do Campismo, nº 854"),
+    Patient(name: 'Catarina Silva', status: 'Recolhido', details: "78 - Avenida de Famalicão, Edifício Terra e Mar, 1ª Dir, nº 12"),
     // Add more patients as needed
   ];
 

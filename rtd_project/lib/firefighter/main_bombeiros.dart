@@ -4,6 +4,7 @@ import 'package:rtd_project/firefighter/list_transports.dart';
 
 import '../patient/select_patient.dart';
 import 'MultiProvider.dart';
+import 'contactos.dart';
 
 void main() {
   runApp(MainFirefighter());
@@ -179,7 +180,11 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                   width: width*0.80,
                                   height: height*0.1,
                                   child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => ContactosInternos())
+                                        );
+                                      },
                                       style: ElevatedButton.styleFrom(
                                         shadowColor: Colors.black,
                                         elevation: 15,

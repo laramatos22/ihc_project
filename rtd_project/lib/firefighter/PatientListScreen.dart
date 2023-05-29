@@ -2,13 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'PatientListProvider.dart';
+import 'main_bombeiros.dart';
 
 class PatientListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Patient List'),
+        automaticallyImplyLeading: false,
+        leading: BackButton(
+            color: Colors.white,
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => MainFirefighter())
+              );
+            }
+        ),
+        title: const Text("Lista de Transportes"),
+        backgroundColor: Color.fromARGB(230, 152, 0, 1),
       ),
       body: Consumer<PatientListProvider>(
         builder: (context, provider, _) {
@@ -19,8 +30,13 @@ class PatientListScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final patient = patients[index]; // Update this line
               return ListTile(
-                title: Text(patient.name),
-                subtitle: Text(patient.status),
+                title: Text(patient.name,
+                  style: TextStyle(
+                    fontSize: 20
+                  ),
+                ),
+                subtitle: Text(patient.details
+                ),
                 trailing: DropdownButton<String>(
                   value: patient.status,
                   items: <String>['Próximo', 'Recolhido', 'Concluído']
