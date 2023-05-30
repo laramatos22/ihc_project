@@ -10,6 +10,13 @@ class PatientListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
+        actions: const [
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 5, 10, 5),
+            child: Image(image: AssetImage("assets/logo/icon.png"),
+            ),
+          ),
+        ],
         leading: BackButton(
             color: Colors.white,
             onPressed: () {

@@ -70,6 +70,7 @@ flutter:
     - assets/images/
     - assets/files/
     - assets/logo/
+    - assets/personas/
 
 flutter_icons:
   android: true

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
-import 'package:rtd_project/firefighter/list_transports.dart';
 
 import '../patient/select_patient.dart';
 import 'MultiProvider.dart';
+import 'PatientsDetails.dart';
 import 'contactos.dart';
 
 void main() {
@@ -44,18 +44,13 @@ class _MainFirefighterState extends State<MainFirefighter> {
       home:Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-          /*
         actions: const [
           Padding(
             padding: EdgeInsets.fromLTRB(0, 5, 10, 5),
-            child: Image(image: AssetImage("assets/images/LogotipoBVCE_branco.png"),
+            child: Image(image: AssetImage("assets/logo/icon.png"),
             ),
           ),
-        ],*/
-        /*
-        leading: const BackButton(
-          color: Colors.white,
-        ),*/
+        ],
         title: const Text("Área do Bombeiro"),
         backgroundColor: Color.fromARGB(230, 150, 0, 0),
       ),
@@ -154,12 +149,53 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: const [
                                           Icon(
-                                              Icons.fire_truck,
+                                              Icons.format_list_bulleted_rounded,
                                               size: 45,
                                               color: Colors.white
                                           ),
 
                                           Text('LISTA DE TRANSPORTES',
+                                            style: TextStyle(
+                                                fontSize: Checkbox.width,
+                                                fontFamily: 'Montserrat',
+                                                color: Colors.white
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                SizedBox(
+                                  width: width*0.80,
+                                  height: height*0.1,
+                                  child: ElevatedButton(
+                                      onPressed: () {
+                                        Navigator.push(context, MaterialPageRoute(
+                                            builder: (context) => PatientsDetails())
+                                        );
+                                      },
+                                      style: ElevatedButton.styleFrom(
+                                        shadowColor: Colors.black,
+                                        elevation: 15,
+                                        backgroundColor: Color.fromARGB(230, 152, 0, 1),
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(13.0)),
+                                      ),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                        children: const [
+                                          Icon(
+                                              Icons.people_alt,
+                                              size: 45,
+                                              color: Colors.white
+                                          ),
+
+                                          Text('DETALHES - PACIENTES',
                                             style: TextStyle(
                                                 fontSize: Checkbox.width,
                                                 fontFamily: 'Montserrat',
@@ -195,7 +231,7 @@ class _MainFirefighterState extends State<MainFirefighter> {
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                         children: const [
                                           Icon(
-                                            Icons.groups_rounded,
+                                            Icons.phone_iphone,
                                             size: 45,
                                             color: Colors.white,
                                           ),

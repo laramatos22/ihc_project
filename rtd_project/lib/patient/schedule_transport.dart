@@ -88,7 +88,7 @@ class _ScheduleTransState extends State<ScheduleTransport> {
                 GenericTreatSession(
                     treatmentName: "Fisioterapia",
                     location: "Hospital Y",
-                    date: "25/05/2023",
+                    date: "30/05/2023",
                     time: "15:00 - 16:00",
                 ),
                 Divider(),
